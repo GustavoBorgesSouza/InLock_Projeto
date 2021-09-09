@@ -1,15 +1,19 @@
+-- DDL
+
 CREATE DATABASE inlock_games_manha;
 GO
 
 USE inlock_games_manha;
 GO
 
+-- Criar tabela para Estúdio
 CREATE TABLE Estudio(
 	idEstudio INT PRIMARY KEY IDENTITY(1,1),
 	nomeEstudio VARCHAR(50) NOT NULL
 );
 GO
 
+-- Criar tabela para os Jogos
 CREATE TABLE Jogo(
 	idJogo INT PRIMARY KEY IDENTITY(1,1),
 	idEstudio INT FOREIGN KEY REFERENCES Estudio(idEstudio),
@@ -20,12 +24,14 @@ CREATE TABLE Jogo(
 );
 GO
 
+-- Criar tabela de tipos de Usuários
 CREATE TABLE TipoUsuario(
 	idTipoUsuario INT PRIMARY KEY IDENTITY,
 	titulo VARCHAR(25) NOT NULL
 );
 GO
 
+-- Criar tabela de Usuário
 CREATE TABLE Usuario(
 	idUsuario INT PRIMARY KEY IDENTITY(1,1),
 	idTipoUsuario INT FOREIGN KEY REFERENCES TipoUsuario(idTipoUsuario),
