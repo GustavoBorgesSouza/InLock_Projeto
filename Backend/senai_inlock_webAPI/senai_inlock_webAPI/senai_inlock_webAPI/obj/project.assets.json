@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Gustavo Rezende\\.nuget\\packages\\": {}
+    "C:\\Users\\gusta\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Senai\\2021-2S-2M\\2S-Projetos\\InLock_games_API\\Backend\\senai_inlock_webAPI\\senai_inlock_webAPI\\senai_inlock_webAPI\\senai_inlock_webAPI.csproj",
+      "projectUniqueName": "C:\\Users\\gusta\\OneDrive\\Área de Trabalho\\InLock_API\\Backend\\senai_inlock_webAPI\\senai_inlock_webAPI\\senai_inlock_webAPI\\senai_inlock_webAPI.csproj",
       "projectName": "senai_inlock_webAPI",
-      "projectPath": "D:\\Senai\\2021-2S-2M\\2S-Projetos\\InLock_games_API\\Backend\\senai_inlock_webAPI\\senai_inlock_webAPI\\senai_inlock_webAPI\\senai_inlock_webAPI.csproj",
-      "packagesPath": "C:\\Users\\Gustavo Rezende\\.nuget\\packages\\",
-      "outputPath": "D:\\Senai\\2021-2S-2M\\2S-Projetos\\InLock_games_API\\Backend\\senai_inlock_webAPI\\senai_inlock_webAPI\\senai_inlock_webAPI\\obj\\",
+      "projectPath": "C:\\Users\\gusta\\OneDrive\\Área de Trabalho\\InLock_API\\Backend\\senai_inlock_webAPI\\senai_inlock_webAPI\\senai_inlock_webAPI\\senai_inlock_webAPI.csproj",
+      "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gusta\\OneDrive\\Área de Trabalho\\InLock_API\\Backend\\senai_inlock_webAPI\\senai_inlock_webAPI\\senai_inlock_webAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Gustavo Rezende\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gusta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
