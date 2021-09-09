@@ -22,7 +22,7 @@ namespace senai_inlock_webAPI.Properties.Interfaces
         /// </summary>
         /// <param name="idProcurar">Id do estudio a ser procurado</param>
         /// <returns>Um objeto do tipo EstudioDomain</returns>
-        EstudioDomain BuscarPorId(int idProcurar);
+        EstudioDomain BuscarPorId(int idEstudio);
 
         /// <summary>
         /// Cadastra um novo Estudio
@@ -34,12 +34,12 @@ namespace senai_inlock_webAPI.Properties.Interfaces
         /// Atualiza um Estudioo já existente
         /// </summary>
         /// <param name="estudioAtualizado">Objeto EstudioDomain que contém os atributos a serem atualizados</param>
-        void Atualizar(EstudioDomain estudioAtualizado);
+        void Atualizar(int idEstudio,EstudioDomain estudioAtualizado);
 
         /// <summary>
         /// Deleta/exculi um estudio
         /// </summary>
         /// <param name="idDeletar">Id do estudio que será deletado</param>
-        void Deletar(int idDeletar);
+        void Deletar(int idEstudio);
     }
 }
