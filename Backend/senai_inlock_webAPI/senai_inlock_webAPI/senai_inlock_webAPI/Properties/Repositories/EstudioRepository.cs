@@ -17,11 +17,11 @@ namespace senai_inlock_webAPI.Properties.Repositories
             {
                 using (SqlConnection con = new SqlConnection(stringConexao))
                 {
-                    string queryUpdateBody = "UPDATE Estudio SET idEstudio = @novoId, nomeEstudio = @novoNome WHERE idEstudio = @idEstudio;";
+                    string queryUpdateBody = "UPDATE Estudio SET nomeEstudio = @novoNome WHERE idEstudio = @idEstudio;";
 
                     using (SqlCommand cmd = new SqlCommand(queryUpdateBody, con))
                     {
-                        cmd.Parameters.AddWithValue("@novoId", idEstudio);
+                        cmd.Parameters.AddWithValue("@idEstudio", idEstudio);
                         cmd.Parameters.AddWithValue("@novoNome", estudioAtualizado.nomeEstudio);
                        
                         con.Open();
