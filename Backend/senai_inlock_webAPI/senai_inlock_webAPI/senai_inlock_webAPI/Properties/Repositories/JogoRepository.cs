@@ -20,6 +20,11 @@ namespace senai_inlock_webAPI.Properties.Repositories
         /// </summary>
         private string stringConexao = "Data Source=localhost\\SQLEXPRESS01; initial catalog=inlock_games_manha; integrated security=true";
 
+        /// <summary>
+        /// Conecta pelo pc do rezende
+        /// </summary>
+        //private string stringConexao = @"Data Source=DESKTOP-5BM5L8P\SQLEXPRESS; initial catalog=inlock_games_manha; user id=sa; pwd=Senai@132;";
+
         public void Atualizar(JogoDomain JogoAtualizado)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))

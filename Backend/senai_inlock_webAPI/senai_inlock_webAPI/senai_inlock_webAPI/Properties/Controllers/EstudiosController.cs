@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using senai_inlock_webAPI.Properties.Domains;
 using senai_inlock_webAPI.Properties.Interfaces;
 using senai_inlock_webAPI.Properties.Repositories;
@@ -21,6 +22,7 @@ namespace senai_inlock_webAPI.Properties.Controllers
             _estudioRepository = new EstudioRepository();
         }
 
+        [Authorize(Roles = "1, 2")]
         [HttpGet]
         // IActionResult = Resultado de uma ação
         // Get() = nome generico
@@ -38,6 +40,7 @@ namespace senai_inlock_webAPI.Properties.Controllers
             return Ok(listaEstudio);
         }
 
+        [Authorize(Roles = "1, 2")]
         [HttpGet("{id}")]
 
         public IActionResult GetById(int id)
@@ -52,7 +55,7 @@ namespace senai_inlock_webAPI.Properties.Controllers
             return Ok(estudioBuscado);
         }
 
-
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(EstudioDomain novoEstudio)
         {
@@ -64,6 +67,7 @@ namespace senai_inlock_webAPI.Properties.Controllers
 
         }
 
+        [Authorize(Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult PutUrl(int id, EstudioDomain estudioAtualizado)
         {
@@ -93,7 +97,7 @@ namespace senai_inlock_webAPI.Properties.Controllers
             }
         }
 
-        
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

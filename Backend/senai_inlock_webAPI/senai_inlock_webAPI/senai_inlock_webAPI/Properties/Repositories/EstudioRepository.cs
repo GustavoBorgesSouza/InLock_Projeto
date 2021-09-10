@@ -10,7 +10,20 @@ namespace senai_inlock_webAPI.Properties.Repositories
 {
     public class EstudioRepository : IEstudioRepository
     {
-        private string stringConexao = @"Data Source=DESKTOP-5BM5L8P\SQLEXPRESS; initial catalog=inlock_games_manha; user id=sa; pwd=Senai@132;";
+        //Conecta pelo windows de casa do borges
+        /// <summary>
+        /// String de conexão que recebe os parâmetros
+        /// Data Source = Nome do Servidor
+        /// initial  catalog = Nome do banco de dados
+        /// user id= sa; pwd= Senai@132 = Faz a autenticação com o SQL SERVER, passando login e senha
+        /// integrated security = Faz a autenticação com o usuário do sistema(windows)
+        /// </summary>
+        private string stringConexao = "Data Source=localhost\\SQLEXPRESS01; initial catalog=inlock_games_manha; integrated security=true";
+
+        /// <summary>
+        /// Conecta pelo pc do rezende
+        /// </summary>
+        //private string stringConexao = @"Data Source=DESKTOP-5BM5L8P\SQLEXPRESS; initial catalog=inlock_games_manha; user id=sa; pwd=Senai@132;";
         public void Atualizar(int idEstudio, EstudioDomain estudioAtualizado)
         {
             if (estudioAtualizado.nomeEstudio != null)

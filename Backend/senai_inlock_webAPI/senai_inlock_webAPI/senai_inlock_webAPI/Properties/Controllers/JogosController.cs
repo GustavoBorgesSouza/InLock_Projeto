@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using senai_inlock_webAPI.Properties.Domains;
 using senai_inlock_webAPI.Properties.Interfaces;
@@ -15,13 +16,14 @@ namespace senai_inlock_webAPI.Properties.Controllers
     [ApiController]
     public class JogosController : ControllerBase
     {
-        private IJogoRepository _JogoRepository { get; set;  }
+        private IJogoRepository _JogoRepository { get; set; }
 
         public JogosController()
         {
             _JogoRepository = new JogoRepository();
         }
 
+        [Authorize(Roles = "1, 2")]
         [HttpGet]
         public IActionResult Get()
         {
@@ -37,6 +39,7 @@ namespace senai_inlock_webAPI.Properties.Controllers
             }
         }
 
+        [Authorize(Roles = "1, 2")]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -56,6 +59,7 @@ namespace senai_inlock_webAPI.Properties.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(JogoDomain novoJogo)
         {
@@ -71,6 +75,7 @@ namespace senai_inlock_webAPI.Properties.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -86,6 +91,7 @@ namespace senai_inlock_webAPI.Properties.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpPut]
         public IActionResult Put(JogoDomain JogoAtualizar)
         {

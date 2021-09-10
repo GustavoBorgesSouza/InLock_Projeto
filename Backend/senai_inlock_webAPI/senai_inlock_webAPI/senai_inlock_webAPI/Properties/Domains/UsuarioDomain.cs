@@ -22,5 +22,7 @@ namespace senai_inlock_webAPI.Properties.Domains
         [Required(ErrorMessage = "Informe a senha")]
         [StringLength(20, MinimumLength = 4, ErrorMessage = "O campo senha precisa ter no mínimo 4 caracteres e no máximo 20")]
         public string Senha { get; set; }
+
+        public TipoUsuarioDomain TipoUsuario { get; set; }
     }
 }

@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>senai_inlock_webAPI</name>
+    </assembly>
+    <members>
+        <member name="T:senai_inlock_webAPI.Properties.Domains.EstudioDomain">
+            <summary>
+            Classse que define a entidade estudio do banco
+            </summary>
+        </member>
+        <member name="T:senai_inlock_webAPI.Properties.Domains.JogoDomain">
+            <summary>
+            Classe que referencia a entidade jogo do banco
+            </summary>
+        </member>
+        <member name="T:senai_inlock_webAPI.Properties.Domains.TipoUsuarioDomain">
+            <summary>
+            Classe que representa a entidade TipoUsuario do banco
+            </summary>
+        </member>
+        <member name="T:senai_inlock_webAPI.Properties.Domains.UsuarioDomain">
+            <summary>
+            Classe que define a entidade usuario do banco
+            </summary>
+        </member>
+        <member name="T:senai_inlock_webAPI.Properties.Interfaces.IEstudioRepository">
+            <summary>
+            Interface responsável pelo repositório EstudioRepository
+            </summary>
+        </member>
+        <member name="M:senai_inlock_webAPI.Properties.Interfaces.IEstudioRepository.ListarTodos">
+            <summary>
+            Retorna todos os estudios
+            </summary>
+            <returns>Uma lista de estudios</returns>
+        </member>
+        <member name="M:senai_inlock_webAPI.Properties.Interfaces.IEstudioRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um estudio pelo id
+            </summary>
+            <param name="idProcurar">Id do estudio a ser procurado</param>
+            <returns>Um objeto do tipo EstudioDomain</returns>
+        </member>
+        <member name="M:senai_inlock_webAPI.Properties.Interfaces.IEstudioRepository.Cadastrar(senai_inlock_webAPI.Properties.Domains.EstudioDomain)">
+            <summary>
+            Cadastra um novo Estudio
+            </summary>
+            <param name="novoEstudio">Objeto EstudioDomain que será cadastrado</param>
+        </member>
+        <member name="M:senai_inlock_webAPI.Properties.Interfaces.IEstudioRepository.Atualizar(System.Int32,senai_inlock_webAPI.Properties.Domains.EstudioDomain)">
+            <summary>
+            Atualiza um Estudioo já existente
+            </summary>
+            <param name="estudioAtualizado">Objeto EstudioDomain que contém os atributos a serem atualizados</param>
+        </member>
+        <member name="M:senai_inlock_webAPI.Properties.Interfaces.IEstudioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta/exculi um estudio
+            </summary>
+            <param name="idDeletar">Id do estudio que será deletado</param>
+        </member>
+        <member name="T:senai_inlock_webAPI.Properties.Interfaces.IJogoRepository">
+            <summary>
+            Interface responsável pelo repositório JogoRepository
+            </summary>
+        </member>
+        <member name="M:senai_inlock_webAPI.Properties.Interfaces.IJogoRepository.ListarTodos">
+            <summary>
+            Retorna todos os Jogos
+            </summary>
+            <returns>Uma lista de Jogos</returns>
+        </member>
+        <member name="M:senai_inlock_webAPI.Properties.Interfaces.IJogoRepository.BuscarPorId(System.Int32)">
+            <summary>
+            Busca um Jogo pelo id
+            </summary>
+            <param name="idProcurar">Id do Jogo a ser procurado</param>
+            <returns>Um objeto do tipo JogoDomain</returns>
+        </member>
+        <member name="M:senai_inlock_webAPI.Properties.Interfaces.IJogoRepository.Cadastrar(senai_inlock_webAPI.Properties.Domains.JogoDomain)">
+            <summary>
+            Cadastra um novo Jogo
+            </summary>
+            <param name="novoJogo">Objeto JogoDomain que será cadastrado</param>
+        </member>
+        <member name="M:senai_inlock_webAPI.Properties.Interfaces.IJogoRepository.Atualizar(senai_inlock_webAPI.Properties.Domains.JogoDomain)">
+            <summary>
+            Atualiza um Jogoo já existente
+            </summary>
+            <param name="JogoAtualizado">Objeto JogoDomain que contém os atributos a serem atualizados</param>
+        </member>
+        <member name="M:senai_inlock_webAPI.Properties.Interfaces.IJogoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta/exculi um Jogo
+            </summary>
+            <param name="idDeletar">Id do Jogo que será deletado</param>
+        </member>
+        <member name="T:senai_inlock_webAPI.Properties.Interfaces.IUsuarioRepository">
+            <summary>
+            Interface responsável pelo repositótrio UsuarioRepository
+            </summary>
+        </member>
+        <member name="M:senai_inlock_webAPI.Properties.Interfaces.IUsuarioRepository.BuscarPorEmailSenha(System.String,System.String)">
+            <summary>
+            Valida o usuario
+            </summary>
+            <param name="email"></param>
+            <param name="senha"></param>
+            <returns>Um objeto do tipo UsuarioDomain que foi buscado</returns>
+        </member>
+        <member name="F:senai_inlock_webAPI.Properties.Repositories.EstudioRepository.stringConexao">
+            <summary>
+            String de conexão que recebe os parâmetros
+            Data Source = Nome do Servidor
+            initial  catalog = Nome do banco de dados
+            user id= sa; pwd= Senai@132 = Faz a autenticação com o SQL SERVER, passando login e senha
+            integrated security = Faz a autenticação com o usuário do sistema(windows)
+            </summary>
+        </member>
+        <member name="M:senai_inlock_webAPI.Properties.Repositories.EstudioRepository.Atualizar(System.Int32,senai_inlock_webAPI.Properties.Domains.EstudioDomain)">
+            <summary>
+            Conecta pelo pc do rezende
+            </summary>
+        </member>
+        <member name="F:senai_inlock_webAPI.Properties.Repositories.JogoRepository.stringConexao">
+            <summary>
+            String de conexão que recebe os parâmetros
+            Data Source = Nome do Servidor
+            initial  catalog = Nome do banco de dados
+            user id= sa; pwd= Senai@132 = Faz a autenticação com o SQL SERVER, passando login e senha
+            integrated security = Faz a autenticação com o usuário do sistema(windows)
+            </summary>
+        </member>
+        <member name="M:senai_inlock_webAPI.Properties.Repositories.JogoRepository.Atualizar(senai_inlock_webAPI.Properties.Domains.JogoDomain)">
+            <summary>
+            Conecta pelo pc do rezende
+            </summary>
+        </member>
+        <member name="F:senai_inlock_webAPI.Properties.Repositories.UsuarioRepository.stringConexao">
+            <summary>
+            String de conexão que recebe os parâmetros
+            Data Source = Nome do Servidor
+            initial  catalog = Nome do banco de dados
+            user id= sa; pwd= Senai@132 = Faz a autenticação com o SQL SERVER, passando login e senha
+            integrated security = Faz a autenticação com o usuário do sistema(windows)
+            </summary>
+        </member>
+        <member name="M:senai_inlock_webAPI.Properties.Repositories.UsuarioRepository.BuscarPorEmailSenha(System.String,System.String)">
+            <summary>
+            Conecta pelo pc do rezende
+            </summary>
+        </member>
+    </members>
+</doc>
